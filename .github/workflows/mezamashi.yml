@@ -1,0 +1,12 @@
+name: simple-heroku-mezamashi
+
+on:
+  schedule:
+    - cron: '0,20,40 0-3,12-23 * * *'
+
+jobs:
+  mezamashi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: curl --head https://it-benkyoukai-meishi.herokuapp.com/
