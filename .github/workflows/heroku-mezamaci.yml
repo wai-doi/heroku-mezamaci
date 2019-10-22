@@ -1,4 +1,4 @@
-name: simple-heroku-mezamashi
+name: heroku-mezamaci
 
 on:
   schedule:
