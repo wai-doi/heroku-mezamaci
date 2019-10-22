@@ -9,11 +9,11 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: print current time (JST)
+      - name: Print current time (JST)
         env:
           TZ: "Asia/Tokyo"
         run: date
-      - name: print app url
+      - name: Print app url
         env:
           APP_URL: ${{ secrets.APP_URL }}
         run: echo $APP_URL

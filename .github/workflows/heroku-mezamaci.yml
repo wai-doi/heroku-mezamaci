@@ -8,11 +8,11 @@ jobs:
   mezamashi:
     runs-on: ubuntu-latest
     steps:
-      - name: wake up heroku app
+      - name: Wake up heroku app
         env:
           APP_URL: ${{ secrets.APP_URL }}
         run: curl --head $APP_URL
-      - name: print current time (JST)
+      - name: Print current time (JST)
         env:
           TZ: "Asia/Tokyo"
         run: date
