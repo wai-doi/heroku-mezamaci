@@ -9,4 +9,7 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Scheduled!"
+      - name: print current time (JST)
+        env:
+          TZ: "Asia/Tokyo"
+        run: date

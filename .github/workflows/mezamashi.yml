@@ -7,6 +7,10 @@ on:
 jobs:
   mezamashi:
     runs-on: ubuntu-latest
-
     steps:
-      - run: curl --head https://it-benkyoukai-meishi.herokuapp.com/
+      - name: wake up heroku app
+        run: curl --head https://it-benkyoukai-meishi.herokuapp.com/
+      - name: print current time (JST)
+        env:
+          TZ: "Asia/Tokyo"
+        run: date
