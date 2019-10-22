@@ -1,4 +1,4 @@
-name: echo
+name: scheduled!
 
 on:
   push:
@@ -8,6 +8,5 @@ on:
 jobs:
   echo:
     runs-on: ubuntu-latest
-
     steps:
       - run: echo "Scheduled!"
