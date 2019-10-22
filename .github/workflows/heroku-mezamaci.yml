@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: wake up heroku app
-        run: curl --head https://it-benkyoukai-meishi.herokuapp.com/
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+        run: curl --head $APP_URL
       - name: print current time (JST)
         env:
           TZ: "Asia/Tokyo"

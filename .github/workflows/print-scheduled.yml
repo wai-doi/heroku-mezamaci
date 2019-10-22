@@ -13,3 +13,7 @@ jobs:
         env:
           TZ: "Asia/Tokyo"
         run: date
+      - name: print app url
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+        run: echo $APP_URL
